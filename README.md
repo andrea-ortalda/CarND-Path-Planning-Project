@@ -99,7 +99,7 @@ vector<double> getXY(double s, double d, const vector<double> &maps_s,
                      const vector<double> &maps_x, 
                      const vector<double> &maps_y) {parts/01a340a5-39b5-4202-9f89-d96de8cf17be/modules/b74b8e43-47d1-47d6-a4cf-4d64ea3e0b80/lessons/407a2efa-3383-480f-9266-5981440b09b3/concepts/3bdfeb8c-8dd6-49a7-9d08-beff6703792d. 
 
-#### 1 ) Helper Functions
+#### 1) Helper Functions
 
 ##### a) double deg2rad(double x)
 Conversion from degrees to radians 
@@ -108,7 +108,7 @@ Conversion from degrees to radians
 ##### b) double rad2deg(double x)
 Conversion from radians to degrees
 
-##### c) double distance(double x1, double y1, double x2, double y2) {
+##### c) double distance(double x1, double y1, double x2, double y2)
 Euclidean distance between two points
 
 ##### d) int ClosestWaypoint(double x, double y, const vector<double> &maps_x, const vector<double> &maps_y)
@@ -123,3 +123,4 @@ Transform from Cartesian x,y coordinates to Frenet s,d coordinates
 ##### g) vector<double> getXY(double s, double d, const vector<double> &maps_s, const vector<double> &maps_x, const vector<double> &maps_y)
 Transform from Frenet s,d coordinates to Cartesian x,y
 
+#### 2) 
