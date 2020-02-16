@@ -11,8 +11,9 @@
 	title="Video Output"  />
 </p>
 
+[image1]: ./write_up_images/identify_other_car.png "Identify Cars"
+[image2]: ./write_up_images/identify_part2.png "Identify Cars"
 
-   
 ### Simulator.
 In this project the Term3 Simulator will be used [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).  
 
@@ -115,6 +116,28 @@ Transform from Cartesian x,y coordinates to Frenet s,d coordinates
 Transform from Frenet s,d coordinates to Cartesian x,y
 
 #### 2) Spline Interpolation
+
+Spline library is used here: first if the previous path is empty, car data is used as starting point, else the two last points are used as reference. 
+
+<p align="center">
+	<img src="/write_up_images/spline_interpolation.png" alt="Spline Interpolation"
+	title="Spline Interpolation"  />
+</p>
+
+#### 3) Points creation
+
+<p align="center">
+	<img src="/write_up_images/spline_interpolation.png" alt="Points creation"
+	title="Points creation"  />
+</p>
+
+#### 4) Identify other cars
+
+Identify Other Cars        | Identify Other Cars       
+:-------------------------:|:-------------------------:|
+![alt text][image1] |       ![alt text][image2] 
+
+#### 5) Behavior planning
 
 <p align="center">
 	<img src="/write_up_images/spline_interpolation.png" alt="Spline Interpolation"
