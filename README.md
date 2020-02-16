@@ -126,8 +126,31 @@ Spline library is used here: first if the previous path is empty, car data is us
 
 #### 3) Points creation
 
+First step in the points creation is to set the x target position (30 meters ahead). Then the y position is calculated through the spline, then the overall distance from the target position (x, y) is calculated by mean of euclidean distance
+
+// Calculate target (x, y) position: x is 30 m ahead.
+          double target_x = 30.0;                                               // horizon
+          double target_y = s(target_x);                                        //target y for the given x
+          double target_dist = sqrt(target_x * target_x + target_y * target_y); //euclidean disatnce
+
+          // starting point where to add x
+
+            // As suggested in the walkthrough, add velocity here for efficiency
+
+              // If the velocity is breaking the speed limit, put back to a accetable value
+
+
+            double N = target_dist / (0.02 * ref_vel / 2.24); //2.24 conversion into meters per second
+
+
+            // Go back to global coordinates: shift and rotation
+
+
+            // Attach new points
+
+
 <p align="center">
-	<img src="/write_up_images/spline_interpolation.png" alt="Points creation"
+	<img src="/write_up_images/create_points.png" alt="Points creation"
 	title="Points creation"  />
 </p>
 
@@ -140,6 +163,6 @@ Identify Other Cars        | Identify Other Cars
 #### 5) Behavior planning
 
 <p align="center">
-	<img src="/write_up_images/spline_interpolation.png" alt="Spline Interpolation"
-	title="Spline Interpolation"  />
+	<img src="/write_up_images/behavior.png" alt="Behavior planning"
+	title="Behavior planning"  />
 </p>
