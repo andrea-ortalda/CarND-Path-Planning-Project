@@ -1,5 +1,17 @@
 # CarND-Path-Planning-Project
-Self-Driving Car Engineer Nanodegree Program
+# Extended Kalman Filter Project
+
+[![Udacity - Self-Driving Car NanoDegree](https://s3.amazonaws.com/udacity-sdc/github/shield-carnd.svg)](http://www.udacity.com/drive)
+
+[//]: # (Image References)
+
+[video0]: ./path16.gif "Final video"
+
+<p align="center">
+	<img src="/image_vgif/path16.gif" alt="Video Output"
+	title="Video Output"  />
+</p>
+
    
 ### Simulator.
 You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).  
