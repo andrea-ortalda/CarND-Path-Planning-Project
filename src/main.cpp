@@ -169,7 +169,10 @@ int main()
             }
           }
 
-          // Behavior : Let's see what to do.
+          // Behavior planning:
+          // change current_lane
+          // slow down
+          // accelerate
           double behavior_velocity = 0;
 
           if (car_ahead)
@@ -311,10 +314,6 @@ int main()
               // If the velocity is breaking the speed limit, put back to a accetable value
               ref_vel = 49.5;
             }
-            // else if (ref_vel < .224)
-            // {
-            //   ref_vel += .224;
-            // }
 
             double N = target_dist / (0.02 * ref_vel / 2.24); //2.24 conversion into meters per second
             double x_point = x_add_on + target_x / N;
