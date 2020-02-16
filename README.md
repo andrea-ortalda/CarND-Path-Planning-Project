@@ -8,7 +8,7 @@
 [video0]: ./path16.gif "Final video"
 
 <p align="center">
-	<img src="/image_vgif/path16.gif" alt="Video Output"
+	<img src="/image_gif/path16.gif" alt="Video Output"
 	title="Video Output"  />
 </p>
 
