@@ -7,22 +7,17 @@
 [video0]: ./path32.gif "Final video"
 
 <p align="center">
-	<img src="/image_gif/path32.gif" alt="Video Output"
+	<img src="/write_up_images/path32.gif" alt="Video Output"
 	title="Video Output"  />
 </p>
 
 
    
 ### Simulator.
-You can download the Term3 Simulator which contains the Path Planning Project from the [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).  
-
-To run the simulator on Mac/Linux, first make the binary file executable with the following command:
-```shell
-sudo chmod u+x {simulator_file_name}
-```
+In this project the Term3 Simulator will be used [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).  
 
 ### Goals
-In this project your goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. You will be provided the car's localization and sensor fusion data, there is also a sparse map list of waypoints around the highway. The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. The car should be able to make one complete loop around the 6946m highway. Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
+In this project the goal is to safely navigate around a virtual highway with other traffic that is driving +-10 MPH of the 50 MPH speed limit. Car's localization and sensor fusion data will be provided. The car should try to go as close as possible to the 50 MPH speed limit, which means passing slower traffic when possible, note that other cars will try to change lanes too. The car should avoid hitting other cars at all cost as well as driving inside of the marked road lanes at all times, unless going from one lane to another. The car should be able to make one complete loop around the 6946m highway. Since the car is trying to go 50 MPH, it should take a little over 5 minutes to complete 1 loop. Also the car should not experience total acceleration over 10 m/s^2 and jerk that is greater than 10 m/s^3.
 
 #### The map of the highway is in data/highway_map.txt
 Each waypoint in the list contains  [x,y,s,dx,dy] values. x and y are the waypoint's map coordinate position, the s value is the distance along the road to get to that waypoint in meters, the dx and dy values define the unit normal vector pointing outward of the highway loop.
@@ -93,10 +88,7 @@ the path has processed since last time.
     ```
 ### Generate Paths
 
-This project was based on the Project Q&A provided by Aaron Brown and David Silver: https://classroom.udacity.com/nanodegrees/nd013/// Transform from Frenet s,d coordinates to Cartesian x,y
-vector<double> getXY(double s, double d, const vector<double> &maps_s, 
-                     const vector<double> &maps_x, 
-                     const vector<double> &maps_y) {parts/01a340a5-39b5-4202-9f89-d96de8cf17be/modules/b74b8e43-47d1-47d6-a4cf-4d64ea3e0b80/lessons/407a2efa-3383-480f-9266-5981440b09b3/concepts/3bdfeb8c-8dd6-49a7-9d08-beff6703792d. 
+This project was based on the Project Q&A provided by Aaron Brown and David Silver: https://classroom.udacity.com/nanodegrees/nd013/parts/01a340a5-39b5-4202-9f89-d96de8cf17be/modules/b74b8e43-47d1-47d6-a4cf-4d64ea3e0b80/lessons/407a2efa-3383-480f-9266-5981440b09b3/concepts/3bdfeb8c-8dd6-49a7-9d08-beff6703792d
 
 #### 1) Helper Functions
 
@@ -122,4 +114,9 @@ Transform from Cartesian x,y coordinates to Frenet s,d coordinates
 ##### g) vector<double> getXY(double s, double d, const vector<double> &maps_s, const vector<double> &maps_x, const vector<double> &maps_y)
 Transform from Frenet s,d coordinates to Cartesian x,y
 
-#### 2) 
+#### 2) Spline Interpolation
+
+<p align="center">
+	<img src="/write_up_images/spline_interpolation.png" alt="Spline Interpolation"
+	title="Spline Interpolation"  />
+</p>
