@@ -11,9 +11,6 @@
 	title="Video Output"  />
 </p>
 
-[image1]: ./write_up_images/identify_other_car.png "Identify Cars"
-[image2]: ./write_up_images/identify_part2.png "Identify Cars"
-
 ### Simulator.
 In this project the Term3 Simulator will be used [releases tab (https://github.com/udacity/self-driving-car-sim/releases/tag/T3_v1.2).  
 
@@ -126,28 +123,7 @@ Spline library is used here: first if the previous path is empty, car data is us
 
 #### 3) Points creation
 
-First step in the points creation is to set the x target position (30 meters ahead). Then the y position is calculated through the spline, then the overall distance from the target position (x, y) is calculated by mean of euclidean distance
-
-// Calculate target (x, y) position: x is 30 m ahead.
-          double target_x = 30.0;                                               // horizon
-          double target_y = s(target_x);                                        //target y for the given x
-          double target_dist = sqrt(target_x * target_x + target_y * target_y); //euclidean disatnce
-
-          // starting point where to add x
-
-            // As suggested in the walkthrough, add velocity here for efficiency
-
-              // If the velocity is breaking the speed limit, put back to a accetable value
-
-
-            double N = target_dist / (0.02 * ref_vel / 2.24); //2.24 conversion into meters per second
-
-
-            // Go back to global coordinates: shift and rotation
-
-
-            // Attach new points
-
+First step in the points creation is to set the x target position (30 meters ahead). Then the y position is calculated through the spline, then the overall distance from the target position (x, y) is calculated by mean of euclidean distance. At this point, the number of missing points is used in the for loop for the point creation, that are now attached once they are converted back to global coordinates.
 
 <p align="center">
 	<img src="/write_up_images/create_points.png" alt="Points creation"
@@ -156,13 +132,18 @@ First step in the points creation is to set the x target position (30 meters ahe
 
 #### 4) Identify other cars
 
-Identify Other Cars        | Identify Other Cars       
-:-------------------------:|:-------------------------:|
-![alt text][image1] |       ![alt text][image2] 
+In this section, the perception phase is performed. For each car in the list coming from the sensor fusion, the lane for the car detected is calculated taking into account lane width (4 meters). Based on the i-th car lane and the distance from our car, booleans that are then used in the Behavior planning are set. 
+
+<p align="center">
+	<img src="/write_up_images/perception.png" alt="Perception"
+	title="Perception"  />
+</p>
 
 #### 5) Behavior planning
 
+Here a simple behavior planning is implemented: according to the detected car, a lane change is performed if there is a free lane (the boolean previously set are here used). In this section, velocity is taken into account: if there are no lanes free and a slower car is in fronto of us,  the velocity is decreased. Similarly, if there are no car in front of us, the vehicle accelerates.
+
 <p align="center">
-	<img src="/write_up_images/behavior.png" alt="Behavior planning"
-	title="Behavior planning"  />
+	<img src="/write_up_images/behavior.png" alt="Behavior Planning"
+	title="Behavior Planning"  />
 </p>
