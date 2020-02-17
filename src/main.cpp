@@ -155,6 +155,7 @@ int main()
             if (car_i_lane == current_lane)
             {
               // Car in our lane.
+              // source: https://github.com/darienmt/CarND-Path-Planning-Project-P1
               car_ahead |= check_car_i_s > car_s && check_car_i_s - car_s < 30;
             }
             else if (car_i_lane - current_lane == -1)
